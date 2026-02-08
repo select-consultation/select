@@ -18,6 +18,10 @@
       padding: 40px 20px;
       text-align: center;
     }
+    header img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
     section {
       padding: 40px 20px;
       max-width: 900px;
@@ -35,6 +39,16 @@
       border-radius: 4px;
       margin-top: 10px;
     }
+    .payment-box {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .qr {
+      max-width: 200px;
+      margin-top: 15px;
+    }
     footer {
       background: #f1f1f1;
       text-align: center;
@@ -46,6 +60,7 @@
 <body>
 
 <header>
+  <img src="logo.png" alt="SELECT Logo">
   <h1>SELECT</h1>
   <p>Where readiness meets selection</p>
 </header>
@@ -64,8 +79,8 @@
   <h2>How It Works</h2>
   <ol>
     <li>Submit a detailed application with your resume</li>
-    <li>Complete payment and verification</li>
-    <li>Book a session based on availability</li>
+    <li>Review payment instructions and complete payment</li>
+    <li>Receive a booking link after payment verification</li>
     <li>Attend a structured interview and feedback session</li>
   </ol>
 </section>
@@ -76,34 +91,67 @@
     <li>One-on-one online interaction</li>
     <li>45 minutes interview simulation</li>
     <li>15 minutes structured feedback</li>
-    <li>Fee: ₹600 per session</li>
+    <li><strong>Session Fee: ₹600</strong></li>
   </ul>
 </section>
 
 <section>
-  <h2>Book a Session</h2>
+  <h2>Payment & Application</h2>
+
   <p>
-    To maintain quality, sessions are conducted on a limited basis.
-    Please begin by submitting the application form.
+    Before making the payment, please review the detailed payment instructions.
   </p>
-  <a class="button" href="PASTE_APPLICATION_FORM_LINK_HERE" target="_blank">
+
+  <a class="button" href="PASTE_PAYMENT_INSTRUCTIONS_DOC_LINK" target="_blank">
+    View Payment Instructions
+  </a>
+
+  <div class="payment-box">
+    <p><strong>Pay ₹600 via UPI</strong></p>
+
+    <a class="button" href="PASTE_UPI_PAYMENT_LINK">
+      Pay Now (UPI)
+    </a>
+
+    <p style="margin-top:15px;">
+      Or scan the QR code below:
+    </p>
+
+    <img src="upi-qr.png" alt="UPI QR Code" class="qr">
+
+    <p style="margin-top:15px;">
+      Payee Name: <strong>Harsh Kumar</strong><br>
+      (Payments are received by the founder on behalf of SELECT)
+    </p>
+  </div>
+
+  <p style="margin-top:20px;">
+    After payment, please submit the application form:
+  </p>
+
+  <a class="button" href="PASTE_APPLICATION_FORM_LINK" target="_blank">
     Apply for a Session
   </a>
+
 </section>
 
 <section>
-  <h2>Connect</h2>
+  <h2>About the Founder</h2>
   <p>
-    For official communication and queries:
-    <br><br>
-    📧 consultation.select@gmail.com
+    SELECT is led by Harsh Kumar.  
+    To view the founder’s educational background, professional experience,
+    and credentials, you may visit the LinkedIn profile below.
   </p>
+
+  <a class="button" href="PASTE_LINKEDIN_PROFILE_LINK" target="_blank">
+    View LinkedIn Profile
+  </a>
 </section>
 
 <footer>
   <p>
     © SELECT | Interview Preparation & Consultation<br>
-    <a href="PASTE_POLICY_DOCUMENT_LINK_HERE" target="_blank">
+    <a href="PASTE_POLICY_DOCUMENT_LINK" target="_blank">
       Policies & Terms of Engagement
     </a>
   </p>
