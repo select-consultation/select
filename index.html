@@ -74,14 +74,12 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="logo.png" alt="SELECT Logo">
   <h1>SELECT</h1>
   <p>Where readiness meets selection</p>
 </header>
 
-<!-- WHAT WE DO -->
 <section>
   <h2>What We Do</h2>
   <p>
@@ -92,7 +90,6 @@
   </p>
 </section>
 
-<!-- HOW IT WORKS -->
 <section>
   <h2>How It Works</h2>
   <ol>
@@ -103,7 +100,6 @@
   </ol>
 </section>
 
-<!-- SESSION DETAILS -->
 <section>
   <h2>Session Details</h2>
   <ul>
@@ -114,7 +110,6 @@
   </ul>
 </section>
 
-<!-- WHO SHOULD APPLY -->
 <section>
   <h2>Who Should Apply</h2>
   <ul>
@@ -124,7 +119,6 @@
   </ul>
 </section>
 
-<!-- PAYMENT & APPLICATION -->
 <section>
   <h2>Payment & Application</h2>
 
@@ -138,11 +132,18 @@
   </a>
 
   <div class="payment-box">
-    <p><strong>Pay ₹600 via UPI (QR Code)</strong></p>
+    <p><strong>Pay ₹600 via UPI</strong></p>
 
-    <p>
-      Please scan the QR code below using any UPI-enabled application
-      (Google Pay, PhonePe, Paytm, BHIM, or banking apps).
+    <!-- ✅ MOBILE FRIENDLY CLICKABLE UPI LINK -->
+    <a class="button"
+       href="upi://pay?pa=kumar97harsh-1@oksbi&pn=Harsh%20Kumar&am=600&cu=INR">
+       Pay via UPI App (Mobile Users)
+    </a>
+
+    <!-- 🔴 REPLACE YOUR_UPI_ID_HERE with something like: harshkumar@okaxis -->
+
+    <p style="margin-top:15px;">
+      Or scan the QR code below:
     </p>
 
     <img src="upi-qr.png" alt="UPI QR Code" class="qr">
@@ -162,7 +163,6 @@
   </a>
 </section>
 
-<!-- ABOUT FOUNDER -->
 <section>
   <h2>About the Founder</h2>
   <p>
@@ -176,7 +176,6 @@
   </a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>
     © SELECT | Interview Preparation & Consultation
