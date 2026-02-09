@@ -51,16 +51,11 @@
       border-radius: 4px;
     }
 
-    .payment-box {
+    .info-box {
       background: #f8fafc;
       padding: 20px;
       border-radius: 6px;
       margin-top: 20px;
-    }
-
-    .qr {
-      max-width: 220px;
-      margin-top: 15px;
     }
 
     footer {
@@ -113,11 +108,10 @@
 <section>
   <h2>How It Works</h2>
   <ol>
-    <li>Submit a detailed application along with your resume</li>
-    <li>Your application is reviewed based on availability and urgency</li>
-    <li>Shortlisted candidates receive a slot invitation</li>
-    <li>Payment is requested after slot allocation</li>
-    <li>Attend a structured interview and feedback session</li>
+    <li>Candidates submit an initial interest form</li>
+    <li>Each submission is reviewed based on relevance and urgency</li>
+    <li>Shortlisted candidates are contacted with next steps</li>
+    <li>Sessions are conducted in a structured interview format</li>
   </ol>
 </section>
 
@@ -129,7 +123,6 @@
     <li>45 minutes interview simulation or counselling discussion</li>
     <li>15 minutes structured feedback and guidance</li>
     <li><strong>Total Session Duration: 60 minutes</strong></li>
-    <li><strong>Session Fee: ₹600</strong></li>
   </ul>
 </section>
 
@@ -143,61 +136,40 @@
   </ul>
 </section>
 
-<!-- PAYMENT & APPLICATION -->
+<!-- INTEREST FORM (REPLACEMENT FOR PAYMENT SECTION) -->
 <section>
-  <h2>Application & Payment</h2>
+  <h2>Begin the Application Process</h2>
 
-  <p>
-    Please note that submitting the application does not guarantee a session.
-    Slots are limited and allocated after review based on urgency and availability.
-  </p>
+  <div class="info-box">
+    <p>
+      SELECT follows a review-based onboarding process.
+      Interested candidates are required to submit their details through
+      an initial interest form.
+    </p>
 
-  <p>
-    Before proceeding, kindly review the detailed payment instructions to
-    understand the process, policies, and confirmation guidelines.
-  </p>
+    <p>
+      Submitting this form does <strong>not</strong> guarantee a session.
+      Applications are reviewed based on preparation stage, urgency,
+      and current availability.
+    </p>
 
-  <a class="button"
-     href="https://docs.google.com/document/d/1AWCX94GqPeY8RsVxDGq9LVEcpjSq3AW6TL9-Xh239Hg/edit?usp=sharing"
-     target="_blank">
-    View Payment Instructions
-  </a>
+    <p>
+      Shortlisted candidates will be contacted separately with further
+      instructions regarding session format, scheduling, and next steps.
+    </p>
 
-  <div class="payment-box">
-    <p><strong>Payment Method: UPI</strong></p>
-
-    <!-- 🔴 PLACEHOLDER: ADD YOUR UPI ID AFTER pa= -->
-    <!-- Example:
-         upi://pay?pa=harshkumar@okhdfc&pn=Harsh%20Kumar&am=600&cu=INR
-    -->
-
+    <!-- EXISTING GOOGLE FORM LINK REUSED AS INTEREST FORM -->
     <a class="button"
-       href="upi://pay?pa=YOUR_UPI_ID_HERE&pn=Harsh%20Kumar&am=600&cu=INR">
-       Pay via UPI App (Mobile Users)
+       href="https://forms.gle/BDyH1D2XnzQ4UJ1h6"
+       target="_blank">
+      Fill Interest Form
     </a>
 
-    <p style="margin-top:15px;">
-      Or scan the QR code below using any UPI-enabled application:
-    </p>
-
-    <!-- 🔴 PLACEHOLDER: UPLOAD YOUR QR CODE IMAGE -->
-    <img src="upi-qr.png" alt="UPI QR Code" class="qr">
-
-    <p style="margin-top:15px;">
-      <strong>Payee Name:</strong> Harsh Kumar
+    <p style="margin-top:15px; font-size:14px; color:#555;">
+      Please ensure that all details are accurate and complete.
+      Incomplete submissions may affect shortlisting.
     </p>
   </div>
-
-  <p style="margin-top:20px;">
-    After successful payment (only after slot allocation), please submit
-    the application form along with valid payment proof.
-  </p>
-
-  <a class="button"
-     href="https://forms.gle/BDyH1D2XnzQ4UJ1h6"
-     target="_blank">
-    Submit Application
-  </a>
 </section>
 
 <!-- ABOUT FOUNDER -->
