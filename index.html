@@ -4,34 +4,37 @@
   <meta charset="UTF-8">
   <title>SELECT | Interview Preparation & Consultation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="logo.png">
 
   <style>
     :root {
-      /* Palette synced with professional Navy/Cobalt Logo */
-      --brand-navy: #0f172a;   /* Midnight Navy */
-      --brand-cobalt: #2563eb; /* Electric Cobalt */
-      --brand-silver: #f1f5f9; /* Soft Professional Gray */
-      --text-main: #1e293b;
+      /* Brand palette strictly derived from Logo */
+      --brand-navy: #0f172a;   /* Primary Midnight Navy */
+      --brand-cobalt: #2563eb; /* Secondary Electric Cobalt */
+      --brand-silver: #f8fafc; /* Clean gray for backgrounds */
+      --text-dark: #1e293b;
       --text-muted: #64748b;
       --white: #ffffff;
     }
 
     body {
-      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       margin: 0;
       padding: 0;
-      color: var(--text-main);
+      color: var(--text-dark);
       line-height: 1.7;
       background-color: var(--white);
     }
 
-    /* HERO BANNER */
+    /* HERO BANNER SECTION */
     .hero-banner {
       position: relative;
-      height: 50vh;
-      min-height: 400px;
-      background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
-                  url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069'); 
+      height: 55vh;
+      min-height: 450px;
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                  url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2070'); 
       background-size: cover;
       background-position: center;
       display: flex;
@@ -44,30 +47,31 @@
     }
 
     .hero-banner img.logo {
-      max-width: 130px;
+      max-width: 120px;
       margin-bottom: 20px;
       border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .hero-banner h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       margin: 0;
       letter-spacing: -1px;
       font-weight: 800;
     }
 
-    .hero-banner p {
+    .hero-banner .tagline {
       font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 600px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--brand-cobalt);
       margin-top: 10px;
     }
 
-    /* MAIN CONTENT WRAPPER */
+    /* MAIN CONTAINER WRAPPER */
     .container {
       max-width: 1100px;
-      margin: -60px auto 60px;
+      margin: -70px auto 60px;
       position: relative;
       z-index: 10;
       padding: 0 20px;
@@ -77,17 +81,10 @@
       background: var(--white);
       padding: 50px;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
       display: grid;
       grid-template-columns: 1.4fr 1fr;
       gap: 50px;
-    }
-
-    /* BRAND STORY */
-    .brand-story h2 {
-      color: var(--brand-navy);
-      font-size: 2rem;
-      margin-top: 0;
     }
 
     .accent-bar {
@@ -97,110 +94,98 @@
       margin-bottom: 25px;
     }
 
+    h2 { color: var(--brand-navy); font-size: 2.2rem; margin-top: 0; }
+
     .methodology-list {
       list-style: none;
       padding: 0;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     .methodology-list li {
-      margin-bottom: 15px;
-      padding-left: 30px;
+      margin-bottom: 18px;
+      padding-left: 35px;
       position: relative;
-      color: var(--text-main);
+      font-size: 1.05rem;
     }
 
     .methodology-list li::before {
-      content: "→";
+      content: "\f058"; /* FontAwesome check circle icon */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
       position: absolute;
       left: 0;
       color: var(--brand-cobalt);
-      font-weight: bold;
     }
 
-    /* FOUNDER PROOF SECTION */
-    .founder-sidebar {
+    /* STRATEGIC SIDEBAR (Refined Founder Credentials) */
+    .sidebar {
       background: var(--brand-navy);
       color: var(--white);
       padding: 40px;
       border-radius: 15px;
+      border-bottom: 5px solid var(--brand-cobalt);
     }
 
-    .founder-sidebar h3 {
-      color: var(--brand-cobalt);
-      font-size: 1.1rem;
+    .sidebar h3 {
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 0;
-    }
-
-    .credential-item {
+      letter-spacing: 2px;
+      color: var(--brand-cobalt);
       margin-bottom: 25px;
     }
 
-    .credential-item strong {
-      display: block;
-      font-size: 1.4rem;
-      color: var(--white);
-    }
+    .stat-box { margin-bottom: 30px; }
+    .stat-box strong { display: block; font-size: 1.4rem; margin-bottom: 4px; }
+    .stat-box span { font-size: 0.85rem; color: #94a3b8; line-height: 1.4; display: block; }
 
-    .credential-item span {
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-
-    /* CTAS */
+    /* BUTTON STYLING */
     .btn {
       display: inline-block;
-      padding: 16px 35px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .btn-cobalt {
+      padding: 18px 35px;
       background: var(--brand-cobalt);
       color: var(--white);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.3s;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
     }
 
-    .btn-cobalt:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
+    .btn:hover { transform: translateY(-2px); background: #1d4ed8; }
 
-    .recruit-section {
+    .recruit-box {
       background: var(--brand-silver);
       margin-top: 40px;
-      padding: 60px;
+      padding: 60px 40px;
       border-radius: 20px;
       text-align: center;
+      border: 1px solid #e2e8f0;
     }
 
     /* FOOTER */
     footer {
-      background: var(--brand-navy);
+      background: #0a0f1d;
       color: #94a3b8;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
-    .social-icons a {
+    .social-links { margin: 25px 0; }
+    .social-links a {
       color: var(--white);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin: 0 15px;
-      opacity: 0.6;
+      opacity: 0.5;
       transition: 0.3s;
     }
 
-    .social-icons a:hover { opacity: 1; color: var(--brand-cobalt); }
+    .social-links a:hover { opacity: 1; color: var(--brand-cobalt); }
 
     @media (max-width: 900px) {
       .main-card { grid-template-columns: 1fr; padding: 30px; }
-      .hero-banner h1 { font-size: 2.5rem; }
+      .hero-banner h1 { font-size: 2.8rem; }
+      .hero-banner .tagline { font-size: 0.9rem; }
     }
   </style>
 
@@ -212,85 +197,86 @@
 <div class="hero-banner">
   <img src="logo.png" alt="SELECT Logo" class="logo">
   <h1>SELECT</h1>
-  <p>Structured preparation for the world's most rigorous selection boards.</p>
+  <div class="tagline">Where Readiness Meets Selection</div>
 </div>
 
 <div class="container">
   <section class="main-card">
-    <div class="brand-story">
+    <div class="content">
       <div class="accent-bar"></div>
-      <h2>The SELECT Methodology</h2>
+      <h2>Engineered Selection Architecture</h2>
       <p>
-        Selection is a science, not a lottery. At <strong>SELECT</strong>, we decode the evaluation patterns of elite academic and professional boards. 
-        Our platform bridges the gap between a candidate's potential and the high-pressure expectations of decision-makers.
+        At <strong>SELECT</strong>, we transform raw preparation into successful outcomes. High-stakes interviews are not just tests of knowledge—they are complex systems. We provide the strategic frameworks required to navigate them. 
       </p>
       
       <ul class="methodology-list">
-        <li><strong>Simulated Rigor:</strong> 45-minute sessions designed to mirror the actual intensity of Tier-1 boards.</li>
-        <li><strong>Structural Feedback:</strong> 15-minute diagnostic deep-dives into narrative framing and technical presence.</li>
-        <li><strong>Cross-Sector Expertise:</strong> Guidance tailored for UPSC, GATE, CAT, and high-stakes private sector roles.</li>
+        <li><strong>Selection Simulations:</strong> High-fidelity mock panels designed for UPSC, GATE, CAT, and Tier-1 Academic roles.</li>
+        <li><strong>Performance Diagnostics:</strong> Structured feedback on narrative clarity, behavioral anchors, and technical presence.</li>
+        <li><strong>Enterprise Transitions:</strong> Strategy sessions for leadership roles in Data Science, Finance, and High-Tech sectors.</li>
       </ul>
 
-      <p>
-        Whether you are navigating a PhD interview at an IIT or a leadership role in a startup, we provide the mental scaffolding to ensure you are the obvious choice.
-      </p>
+      <p>We provide the mental scaffolding to ensure you don't just participate, but lead the selection list.</p>
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScBUExWXABkSe685OyBJOfpt0BZpHbq6Nna6fPHEv--IlBbsg/viewform?usp=header" class="btn btn-cobalt">
-        Reserve a Strategy Session
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScBUExWXABkSe685OyBJOfpt0BZpHbq6Nna6fPHEv--IlBbsg/viewform?usp=header" class="btn">
+        Initiate Your Strategy Session
       </a>
     </div>
 
-    <aside class="founder-sidebar">
+    <aside class="sidebar">
       <h3>Strategic Leadership</h3>
-      <p style="font-size: 0.9rem; margin-bottom: 30px;">
-        SELECT is led by an <strong>IIT Mandi (MBA)</strong> and <strong>NIT Hamirpur (B.Tech)</strong> alumnus with a proven track record across competitive domains.
+      <p style="font-size: 0.9rem; margin-bottom: 30px; opacity: 0.9;">
+        Led by a dual-pedigree <strong>IIT Mandi (MBA)</strong> and <strong>NIT Hamirpur (B.Tech)</strong> alumnus with proven success across National selection boards.
       </p>
 
-      <div class="credential-item">
-        <strong>Expertise Benchmarking</strong>
-        <span>Qualified/Navigated: UPSC, GATE, CAT, UGC NET</span>
+      <div class="stat-box">
+        <strong>Selection Authority</strong>
+        <span>Qualified & Navigated: UPSC, GATE, CAT, UGC NET</span>
       </div>
 
-      <div class="credential-item">
-        <strong>Capital Strategy</strong>
-        <span>Core team contributor for ₹10.8Cr Seed Fundraise</span>
+      <div class="stat-box">
+        <strong>Operational Strategy</strong>
+        <span>Core member of the team securing ₹10.8Cr in Seed Funding</span>
       </div>
 
-      <div class="credential-item">
-        <strong>Data Rigor</strong>
-        <span>Managed 3.5M+ records to drive ₹96L in revenue optimization</span>
+      <div class="stat-box">
+        <strong>Analytical Rigor</strong>
+        <span>96L Revenue impact via optimization of 3.5M+ data records</span>
       </div>
 
-      <a href="https://www.linkedin.com/in/harsh-kumar-549908191" target="_blank" style="color: var(--brand-cobalt); text-decoration: none; font-size: 0.9rem; font-weight: bold;">
-        <i class="fab fa-linkedin"></i> View Founder Credentials
+      <a href="https://www.linkedin.com/in/harsh-kumar-549908191" target="_blank" style="color: var(--brand-cobalt); text-decoration: none; font-weight: bold; font-size: 0.9rem;">
+        <i class="fab fa-linkedin"></i> Verified Credentials
       </a>
     </aside>
   </section>
 
-  <section class="recruit-section">
-    <h2 style="color: var(--brand-navy); margin-top: 0;">Expand the SELECT Network</h2>
-    <p style="max-width: 650px; margin: 0 auto 30px; color: var(--text-muted);">
-      We are actively recruiting subject matter experts and industry veterans to join our consultant panel. 
-      Help us shape the next generation of leaders.
+  <section class="recruit-box">
+    <h2 style="margin-top:0;">Join the SELECT Panel</h2>
+    <p style="max-width: 700px; margin: 0 auto 30px; color: var(--text-muted);">
+      SELECT is expanding. We are seeking elite consultants from Academia and Industry to partner with us in mentoring the next generation of top-tier candidates.
     </p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScBUExWXABkSe685OyBJOfpt0BZpHbq6Nna6fPHEv--IlBbsg/viewform?usp=header" class="btn" style="border: 2px solid var(--brand-navy); color: var(--brand-navy);">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScBUExWXABkSe685OyBJOfpt0BZpHbq6Nna6fPHEv--IlBbsg/viewform?usp=header" class="btn" style="background: var(--brand-navy);">
       Apply as a Consultant
     </a>
   </section>
 </div>
 
 <footer>
-  <img src="logo.png" alt="SELECT" style="max-width: 70px; margin-bottom: 20px;">
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/company/select-consultation/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://youtube.com/@consultation.select" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/consultation.select" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:consultation.select@gmail.com"><i class="fas fa-envelope"></i></a>
+  <img src="logo.png" alt="SELECT" style="max-width: 70px; margin-bottom: 15px;">
+  <div style="font-weight: 700; color: white; letter-spacing: 1px; font-size: 1.2rem;">SELECT</div>
+  <div style="font-size: 0.8rem; margin-bottom: 30px; opacity: 0.7;">Where Readiness Meets Selection</div>
+
+  <div class="social-links">
+    <a href="https://x.com/consultselect" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/select-consultation/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://youtube.com/@consultation.select" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/consultation.select" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:consultation.select@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
   </div>
-  <p style="margin-top: 30px; font-size: 0.8rem;">
+
+  <p style="margin-top: 40px; font-size: 0.85rem;">
     <a href="https://docs.google.com/document/d/1HrG1vZ635icDhvHzJBn-lnQQJV-nBLcald2ngkf2Gq4/edit?usp=sharing" target="_blank" style="color: #94a3b8; text-decoration: none;">Policies & Terms of Engagement</a>
   </p>
-  <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.5;">&copy; 2026 SELECT Consultation. All rights reserved.</p>
+  <p style="font-size: 0.75rem; margin-top: 15px; opacity: 0.4;">&copy; 2026 SELECT Consultation. All rights reserved.</p>
 </footer>
 
 </body>
